@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Digital Image Processing Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Advanced Digital Image Processing Platform</h1>
+        <p>Real-time spatial filtering, histogram adjustments, and pixel-level matrix transformation pipeline.</p>
+    </header>
+
+    <main class="workspace">
+        <section class="control-panel">
+            <h2>DIP Control Pipeline</h2>
+            
+            <div class="upload-zone" id="drop-zone">
+                <p>Drag & Drop Source Image or <span>Browse File</span></p>
+                <input type="file" id="file-input" accept="image/*">
+            </div>
+
+            <div class="control-group">
+                <label for="brightness">Brightness Modulation (Linear Offset)</label>
+                <input type="range" id="brightness" min="-100" max="100" value="0">
+                <span class="value-badge" id="brightness-val">0</span>
+            </div>
+
+            <div class="control-group">
+                <label for="contrast">Contrast Stretching (Gain Factor)</label>
+                <input type="range" id="contrast" min="-100" max="100" value="0">
+                <span class="value-badge" id="contrast-val">0</span>
+            </div>
+
+            <div class="control-group">
+                <label for="gamma">Gamma Correction (Non-Linear Exposure)</label>
+                <input type="range" id="gamma" min="2" max="30" value="10">
+                <span class="value-badge" id="gamma-val">1.0</span>
+            </div>
+
+            <div class="control-group filters-group">
+                <label>Spatial & Color Transformations</label>
+                <div class="filter-buttons-grid">
+                    <button id="gray-btn" class="filter-btn">Grayscale (Luminance)</button>
+                    <button id="invert-btn" class="filter-btn">Invert Matrix</button>
+                    <button id="blur-btn" class="filter-btn">Spatial Blur</button>
+                    <button id="sharpen-btn" class="filter-btn pro-btn">Laplacian Sharpen</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="download-btn" class="btn btn-save">Export Rendered Image</button>
+                <button id="reset-btn" class="btn btn-reset">Reset Pipeline State</button>
+            </div>
+        </section>
+
+        <section class="viewer-panel">
+            <div class="image-box">
+                <h3>Source Matrix (Original)</h3>
+                <div class="canvas-container">
+                    <canvas id="canvas-original"></canvas>
+                </div>
+            </div>
+            
+            <div class="image-box">
+                <h3>Processed Matrix (Enhanced)</h3>
+                <div class="canvas-container">
+                    <canvas id="canvas-processed"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

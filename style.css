@@ -1,0 +1,318 @@
+/* Premium VisionAI Pink/Cream Solid-Glassmorphic Theme Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Soft cream base jo text ko mazeed ukhare ga */
+    background: #fdf5f0; 
+    background-attachment: fixed;
+    /* Rich Coffee-Charcoal color behtar readability ke liye */
+    color: #1e2229; 
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+header h1 {
+    color: #1e2229; 
+    font-size: 2.6rem;
+    font-weight: 800; /* Boldness barha di taake prominent ho */
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+}
+
+header p {
+    color: #5a626a; /* Darker grey clear reading ke liye */
+    font-size: 1.05rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Main Layout Architecture Mesh */
+.workspace {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 35px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Enhanced Control Panel Card */
+.control-panel {
+    /* White opacity barha di taake background se alag nikal kar aaye */
+    background: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    /* Stronger and more defined border */
+    border: 1.5px solid rgba(194, 65, 96, 0.3);
+    
+    padding: 28px;
+    border-radius: 24px; 
+    /* Deep soft shadow layout ko lift karne ke liye */
+    box-shadow: 0 20px 40px -15px rgba(194, 65, 96, 0.12); 
+    height: fit-content;
+}
+
+.control-panel h2 {
+    font-size: 1.25rem;
+    color: #1e2229; 
+    margin-bottom: 22px;
+    border-bottom: 2px solid rgba(194, 65, 96, 0.2); /* Moti border line */
+    padding-bottom: 12px;
+    font-weight: 700;
+}
+
+/* Prominent Upload Zone */
+.upload-zone {
+    /* Iski border ko deep rose kiya taake box saaf nazar aaye */
+    border: 2px dashed rgba(194, 65, 96, 0.4); 
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 18px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.9); /* Solid white core */
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 0 2px 8px rgba(194, 65, 96, 0.05);
+}
+
+.upload-zone:hover {
+    background: #ffffff;
+    border-color: #c24160;
+    box-shadow: 0 8px 20px rgba(194, 65, 96, 0.1);
+}
+
+.upload-zone p {
+    color: #495057;
+    font-size: 0.9rem;
+    font-weight: 600; /* Text weight barha diya */
+}
+
+.upload-zone span {
+    color: #c24160; 
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.upload-zone input {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Control Element Sliders Layout Blocks */
+.control-group {
+    margin-top: 24px;
+    position: relative;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1e2229; /* Darker label */
+    font-size: 0.85rem;
+    font-weight: 700; /* Zyada prominent text */
+}
+
+.control-group input[type="range"] {
+    width: 100%;
+    accent-color: #c24160; 
+    background: #e2cbd1; /* Track background ko deep rose-grey kiya */
+    border-radius: 4px;
+    height: 6px; /* Motai thodi barha di */
+    outline: none;
+}
+
+.value-badge {
+    display: inline-block;
+    margin-top: 6px;
+    background: rgba(194, 65, 96, 0.1); /* High contrast background */
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #c24160;
+    font-family: monospace;
+    font-weight: 700;
+    border: 1px solid rgba(194, 65, 96, 0.25);
+}
+
+/* Interactive Filter Matrix Button Architecture */
+.filters-group {
+    margin-top: 25px;
+    border-top: 2px solid rgba(194, 65, 96, 0.15);
+    padding-top: 20px;
+}
+
+.filter-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.filter-btn {
+    background: #ffffff; /* Bilkul safaid buttons taake alag dikhein */
+    border: 1.5px solid rgba(194, 65, 96, 0.25);
+    color: #1e2229;
+    padding: 12px;
+    border-radius: 14px; 
+    cursor: pointer;
+    font-weight: 700; /* Thick font */
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    text-align: left;
+    padding-left: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.filter-btn:hover {
+    background: #fdf5f0;
+    color: #c24160;
+    border-color: #c24160;
+}
+
+.filter-btn.active {
+    background: #c24160; 
+    color: #ffffff;
+    font-weight: 700;
+    border-color: #c24160;
+    box-shadow: 0 6px 20px rgba(194, 65, 96, 0.3); /* Strong active shadow */
+}
+
+/* Professional Edge Transformation Configuration Button States */
+.pro-btn {
+    border-color: rgba(194, 65, 96, 0.4); 
+    color: #c24160;
+}
+
+.pro-btn:hover {
+    background: rgba(194, 65, 96, 0.08);
+    border-color: #c24160;
+}
+
+.pro-btn.active {
+    background: #c24160; 
+    color: #ffffff;
+    border-color: #c24160;
+    box-shadow: 0 6px 20px rgba(194, 65, 96, 0.3);
+}
+
+/* Primary Core Pipeline Application Actions Buttons System */
+.action-buttons {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px; /* Slight padding increase for premium look */
+    border: none;
+    border-radius: 20px; 
+    font-size: 0.95rem;
+    font-weight: 700; /* High prominence bold text */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-save {
+    background: #c24160; 
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(194, 65, 96, 0.25);
+}
+
+.btn-save:hover {
+    background: #90203a;
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 8px 25px rgba(194, 65, 96, 0.35);
+}
+
+.btn-reset {
+    background: rgba(255, 255, 255, 0.9); 
+    border: 2px solid rgba(194, 65, 96, 0.4); /* Thicker border */
+    color: #c24160;
+}
+
+.btn-reset:hover {
+    background: #ffffff;
+    color: #90203a;
+    border-color: #90203a;
+}
+
+/* --- MAIN SIDE-BY-SIDE RENDERING GRAPHICS PANELS VIEWER --- */
+.viewer-panel {
+    display: flex;
+    flex-direction: row; 
+    gap: 25px;
+    background: rgba(255, 255, 255, 0.8); /* Background opacity ko barha diya */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    
+    /* Direct strong gradient border */
+    border: 1.5px solid rgba(194, 65, 96, 0.3);
+    
+    padding: 30px;
+    border-radius: 24px;
+    align-items: center;
+    justify-content: center;
+    min-height: 550px;
+    box-shadow: 0 20px 45px -15px rgba(194, 65, 96, 0.1); /* Crisp Shadow */
+}
+
+.image-box {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff; /* Solid white inner box for high element pop */
+    padding: 22px;
+    border-radius: 18px;
+    border: 1.5px solid rgba(194, 65, 96, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+}
+
+.image-box h3 {
+    font-size: 0.85rem;
+    color: #1e2229; /* Heading dark color */
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 800; /* Extra bold text */
+}
+
+.canvas-container {
+    width: 100%;
+    max-width: 500px; 
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15); /* Main image canvas shadow increased */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 2px solid rgba(194, 65, 96, 0.2); /* Canvas outer bounding ring */
+}
+
+canvas {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1150px) {
+    .workspace {
+        grid-template-columns: 1fr; 
+    }
+    .viewer-panel {
+        flex-direction: column; 
+    }
+}
